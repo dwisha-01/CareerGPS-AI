@@ -1,4 +1,4 @@
-const User = require("../models/User");
+const User = require("../models/user");
 const Analysis = require("../models/Analysis");
 const pdf = require("pdf-parse");
 
@@ -22,7 +22,7 @@ const generateAnalysis = async (req, res) => {
         }
 
         const model = genAI.getGenerativeModel({
-            model: "gemini-2.5-flash"
+            model: "gemini-3.5-flash"
         });
 
         const prompt = `
@@ -150,7 +150,7 @@ const analyzeResume = async (req, res) => {
         }
 
         const model = genAI.getGenerativeModel({
-            model: "gemini-2.5-flash"
+            model: "gemini-3.5-flash"
         });
 
         const prompt = `
@@ -267,7 +267,7 @@ const rewriteBulletPoint = async (req, res) => {
         }
 
         const model = genAI.getGenerativeModel({
-            model: "gemini-2.5-flash"
+            model: "gemini-3.5-flash"
         });
 
         const prompt = `
@@ -319,4 +319,4 @@ Current Bullet Point:
     }
 };
 
-module.exports = { generateAnalysis, getAnalysisHistory, analyzeResume, updateAnalysisProgress, rewriteBulletPoint };
+module.exports = { generateAnalysis, getAnalysisHistory, analyzeResume, updateAnalysisProgress, rewriteBulletPoint };
