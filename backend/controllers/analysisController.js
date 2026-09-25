@@ -1,5 +1,5 @@
 const User = require("../models/user");
-const Analysis = require("../models/Analysis");
+const Analysis = require("../models/analysis");
 const pdf = require("pdf-parse");
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
