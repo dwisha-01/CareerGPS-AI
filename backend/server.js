@@ -3,8 +3,8 @@ const express = require("express");
 const cors = require("cors");
 const authRoutes = require("./routes/authRoutes");
 require("dotenv").config();
-console.log(process.env.PORT);
-console.log(process.env.JWT_SECRET);
+
+
 const app = express();
 connectDB();
 const PORT =  process.env.PORT || 5000;
